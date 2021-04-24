@@ -49,6 +49,16 @@ class ArbolBinario{
                 this->preOrden(nodo->derecha);
             }
         }
+
+        void postOrden(Nodo * nodo){
+            if (nodo){
+                this->preOrden(nodo->izquierda);
+                this->preOrden(nodo->derecha);
+                cout << nodo->valor << ", ";
+            }
+        }
+
+
 };
 
 
