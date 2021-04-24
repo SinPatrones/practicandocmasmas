@@ -30,10 +30,23 @@ class ArbolBinario{
         }
 
         void insertar(int nuevoValor){
-            if (!this->raiz){
-                this->raiz = new Nodo(nuevoValor);
-            } else {
+            Nodo ** aux = &this->raiz;
+            while (*aux){
+                if (nuevoValor > (*aux)->valor){
+                    aux = &(*aux)->derecha;
+                } else {
+                    aux = &(*aux)->izquierda;
+                }
+            }
+            *aux = new Nodo(nuevoValor);
 
+        }
+
+        void preOrden(Nodo * nodo){
+            if (nodo){
+                cout << nodo->valor << ", ";
+                this->preOrden(nodo->izquierda);
+                this->preOrden(nodo->derecha);
             }
         }
 };
