@@ -62,6 +62,18 @@ class ArbolBinario{
             }
         }
 
+        void inOrden(Nodo * nodo){
+            if (nodo){
+                this->preOrden(nodo->izquierda);
+                cout << nodo->valor << ", ";
+                this->preOrden(nodo->derecha);
+            }
+        }
+
+        void inOrden(){
+            this->inOrden(this->raiz);
+        }
+
 
 };
 

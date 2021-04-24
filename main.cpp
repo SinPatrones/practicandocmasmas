@@ -13,7 +13,7 @@ int main(){
     ab.insertar(40);
     ab.insertar(70);
 
-    ab.preOrden();
+    ab.inOrden();
 
     cout << "RAIZ:" << ab.raiz->valor << endl;
     return 1;
