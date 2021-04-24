@@ -50,6 +50,10 @@ class ArbolBinario{
             }
         }
 
+        void preOrden(){
+            this->preOrden(this->raiz);
+        }
+
         void postOrden(Nodo * nodo){
             if (nodo){
                 this->preOrden(nodo->izquierda);
