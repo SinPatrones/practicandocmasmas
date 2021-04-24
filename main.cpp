@@ -1,18 +1,13 @@
 #include <iostream>
-#include "lista.h"
+#include "arbolbinario.h"
 
 using namespace std;
 
 int main(){
 
-    Lista lista;
+    ArbolBinario ab;
 
-    lista.insertar(4);
-    lista.insertar(6);
-    lista.insertar(10);
-    lista.insertar(11);
-
-    lista.mostrar();
+    ab.insertar(29);
 
     return 1;
 }
